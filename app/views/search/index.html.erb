@@ -1,0 +1,15 @@
+<h2>Poem Search Results</h2>
+
+<% @poems.each do |poem| %>
+<section class='poem'>
+    <h4 class='title'>Title: <%= poem.title %></h4>
+    <h4 class='author'>Author: <%= poem.author %></h4>
+    <div class='analysis'>Analyses:
+      <ul>
+        <% poem.tones.each do |analysis|%>
+            <li><%= analysis %></li>
+        <% end %>
+      </ul>
+    </div>
+</section>
+<% end %>
